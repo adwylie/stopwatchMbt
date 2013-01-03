@@ -1,0 +1,219 @@
+// Standard import statements.
+Import Core;
+
+Namespace DaveArnold.Contracts
+{
+	MainContract Stopwatch
+    {
+		// Variables to keep track of state for testing.
+		
+		// We have two display modes; date & time mode and timer mode.
+		Scalar Boolean timerDisplayed;
+		
+        // We can have the timer running whilst its display is frozen.
+		Scalar Boolean timerFrozen;
+		
+        // The timer mode will start off as being reset.
+		Scalar String timerState;
+    
+		// Use the timer built-in to keep track/test the time text display.
+		Timer timer;
+    
+		// The current mode of the stopwatch, either
+		// date & time mode, or timer mode.
+		// Timer | DateTime
+		Observability Scalar String getMode();
+		
+		// The current timer state, either reset (0:00),
+		// stopped (x:xx), or running.
+		// Reset | Stopped | Running
+		Observability Scalar String getTimerState();
+		
+		// Return whether the timer is currently frozen.
+		Observability Scalar Boolean isTimerFrozen();
+		
+				
+		// *** ADDED CODE FOR TESTING ***
+		/*
+		Scalar String testOne = "aee";
+		Scalar String testTwo = "aoe";
+		
+		Metric Scalar String modeOne() { context.testOne; }
+		Metric Scalar String modeTwo() { context.testTwo; }
+		
+		Reports
+		{
+			Report("-->{0}::{1}<--", modeOne(), modeTwo());
+		}
+		*/
+		// *** END ADDED CODE FOR TESTING ***
+		
+		// Get the current time data of the watch.
+		Observability Scalar String getUITimeText();
+		Observability Scalar String getDateTimeText();
+		Observability Scalar String getTimerText();
+		
+		// Check that the ui is displaying the right info w/
+		// regards to the current stopwatch state.
+		Invariant displayCheck
+		{
+			Scalar String time = getUITimeText();
+			Scalar String timer = getTimerText();
+			Scalar String dateTime = getDateTimeText();
+			
+			Scalar String currentMode = getMode();
+			
+			choice("DateTime" == currentMode) true
+			{
+				choice("Running" == getTimerState()) false
+				{
+					Check(time == dateTime);
+					//context.testOne = time;
+					//context.testTwo = dateTime;
+				}
+			}
+			
+			choice("Timer" == currentMode) true
+			{
+				choice("Running" == getTimerState()) false
+				{
+					Check(time == timer);
+					//context.testOne = time;
+					//context.testTwo = timer;
+				}
+			}
+		}
+		
+		// Responsibilities which will correspond to system inputs.
+		// eg. button presses.
+		Responsibility new()
+		{
+			// Set up initial variables.
+			timerDisplayed = false;
+			timerFrozen = false;
+			timerState = "Reset";
+		}
+		
+		Responsibility modeButton()
+		{
+			// Get the current mode. If the timer is displayed then our
+			// timerDisplayed variable should be true. After execution the
+			// mode should be changed to the date & time.
+			// Test for both this and the alternate display.
+			
+			Scalar String newMode;
+			Scalar String currentMode = getMode();
+			Scalar Boolean isDisplayCorrect;
+			
+			choice("Timer" == currentMode) true
+			{
+				isDisplayCorrect = timerDisplayed;
+				newMode = "DateTime";
+			}
+			
+			choice("DateTime" == currentMode) true
+			{
+				isDisplayCorrect = (not timerDisplayed);
+				newMode = "Timer";
+			}
+			
+			Pre(isDisplayCorrect);
+			Execute();
+			Post(newMode == getMode());
+			
+			timerDisplayed = (not timerDisplayed);
+		}
+		
+		Responsibility startStopButton()
+		{
+			// Both before and after the start/stopbutton is pressed the watch
+			// must be in the timer mode.
+			// If the timer state is running, then it should be changed to
+			// stopped after the button is pressed. Also, the timer display
+			// should be unfrozen if it currently is frozen.
+			// If the timer state is stopped or reset, then it should be
+			// changed to running after the button is pressed.
+			
+			Scalar String newTimerState;
+			Scalar Boolean checkTimerFrozen = false;
+			
+			Pre(timerDisplayed);
+			Pre("Timer" == getMode());
+			
+			choice(timerState == "Running") true
+			{
+				newTimerState = "Stopped";
+				checkTimerFrozen = true;
+			}
+			
+			choice(timerState == "Stopped" || timerState == "Reset") true
+			{
+				newTimerState = "Running";
+			}
+			
+			Execute();
+			Post(newTimerState == getTimerState());
+			timerState = getTimerState();
+			
+			choice(checkTimerFrozen) true
+			{
+				timerFrozen = false;
+				
+				// Our timer should also not be frozen.
+				Post(timerFrozen == isTimerFrozen());
+			}
+			
+			// Verify that the timer is still displayed, which is the same
+			// as saying that the watch is in 'Timer' mode.
+			Post(timerDisplayed);
+			Post("Timer" == getMode());
+		}
+		
+		Responsibility resetLapButton()
+		{
+			// Both before and after the reset/lapbutton is pressed the watch
+			// must be in the timer mode. Also, the timer state must not be
+			// "reset" when the reset button is pressed.
+			// If the timer state is "stopped" then the timer should be reset
+			// after the button is pressed.
+			// If the timer state is "running" then the timer should still be
+			// running after the button is pressed. (display will be frozen)
+			
+			Scalar String newTimerState;
+			Scalar Boolean toggleTimerFrozen = false;
+			
+			Pre(timerDisplayed);
+			Pre("Timer" == getMode());
+			
+			Pre(timerState == "Stopped" || timerState == "Running");
+			
+			choice(timerState == "Stopped") true
+			{
+				newTimerState = "Reset";
+			}
+			
+			choice(timerState == "Running") true
+			{
+				newTimerState = "Running";
+				toggleTimerFrozen = true;
+			}
+			
+			Execute();
+			Post(newTimerState == getTimerState());
+			timerState = getTimerState();
+			
+			choice(toggleTimerFrozen) true
+			{
+				timerFrozen = (not timerFrozen);
+				Post(timerFrozen == isTimerFrozen());
+			}
+			
+			// Verify that the timer is still displayed, which is the same
+			// as saying that the watch is in 'Timer' mode.
+			Post(timerDisplayed);
+			Post("Timer" == getMode());
+		}
+		
+    }
+    // End Contract
+}

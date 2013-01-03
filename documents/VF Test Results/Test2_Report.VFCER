@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report>
+  <Version>1.3.0.2</Version>
+  <Project>ACL Project</Project>
+  <Runtime>Runtime 1.3 - Version 1.3.0.2 (Feb 2012)</Runtime>
+  <IUTName>stopwatchImp.exe</IUTName>
+  <Contract ID="Stopwatch" Name="DaveArnold.Contracts.Stopwatch">
+    <BoundTo>stopwatchImp.StopwatchCS</BoundTo>
+    <Passed>true</Passed>
+    <StaticChecks Passed="0" Failed="0" />
+    <DynamicChecks Passed="0" Failed="0" />
+    <MetricChecks Passed="0" Failed="0" />
+    <Pre Passed="8" Failed="0" />
+    <Checks Passed="7" Failed="0" />
+    <Beliefs Passed="0" Failed="0" />
+    <Post Passed="11" Failed="0" />
+    <Scenarios Passed="0" Failed="0" />
+    <Structure>
+      <Passed>true</Passed>
+      <Beliefs Passed="0" Failed="0" />
+    </Structure>
+    <InstanceCount>1</InstanceCount>
+    <Instance ID="42096712">
+      <Passed>true</Passed>
+      <DynamicChecks Passed="0" Failed="0" />
+      <MetricChecks Passed="0" Failed="0" />
+      <Scenarios Passed="0" Failed="0" />
+      <Pre Passed="8" Failed="0" />
+      <Checks Passed="7" Failed="0" />
+      <Beliefs Passed="0" Failed="0" />
+      <Post Passed="11" Failed="0" />
+      <Scenarios Passed="0" Failed="0" />
+      <Observability ID="Scalar String getUITimeText()">
+        <Passed>true</Passed>
+        <BindPoint>getCurrentDisplay</BindPoint>
+        <ExecutionCount>9</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Observability ID="Scalar String getTimerText()">
+        <Passed>true</Passed>
+        <BindPoint>getCurrentTimer</BindPoint>
+        <ExecutionCount>9</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Observability ID="Scalar String getDateTimeText()">
+        <Passed>true</Passed>
+        <BindPoint>getCurrentDateTime</BindPoint>
+        <ExecutionCount>9</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Observability ID="Scalar String getMode()">
+        <Passed>true</Passed>
+        <BindPoint>getMode</BindPoint>
+        <ExecutionCount>17</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Observability ID="Scalar String getTimerState()">
+        <Passed>true</Passed>
+        <BindPoint>getTimerState</BindPoint>
+        <ExecutionCount>15</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Observability ID="Scalar Boolean isTimerFrozen()">
+        <Passed>true</Passed>
+        <BindPoint>isTimerFrozen</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Responsibility ID="Scalar Void new()">
+        <Passed>true</Passed>
+        <BindPoint>.ctor</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <Pre Passed="0" Failed="0" />
+        <Checks Passed="1" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+        <Post Passed="0" Failed="0" />
+        <DynamicChecks Passed="0" Failed="0" />
+        <Execution ID="1">
+          <Pre Passed="0" Failed="0" />
+          <Checks Passed="0" Failed="0" />
+          <Beliefs Passed="0" Failed="0" />
+          <Post Passed="0" Failed="0" />
+          <DynamicChecks Passed="0" Failed="0" />
+          <Passed>true</Passed>
+          <Invariant ID="displayCheck">
+            <Passed>true</Passed>
+            <ExecutionCount>1</ExecutionCount>
+            <DynamicChecks Passed="0" Failed="0" />
+            <Checks Passed="1" Failed="0" />
+            <Beliefs Passed="0" Failed="0" />
+            <Execution ID="1">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="1" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+              <Check Type="Check" Text="time == dateTime" Passed="true" />
+            </Execution>
+          </Invariant>
+        </Execution>
+      </Responsibility>
+      <Responsibility ID="Scalar Void modeButton()">
+        <Passed>true</Passed>
+        <BindPoint>modeButton</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <Pre Passed="1" Failed="0" />
+        <Checks Passed="2" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+        <Post Passed="1" Failed="0" />
+        <DynamicChecks Passed="0" Failed="0" />
+        <Execution ID="1">
+          <Pre Passed="1" Failed="0" />
+          <Checks Passed="0" Failed="0" />
+          <Beliefs Passed="0" Failed="0" />
+          <Post Passed="1" Failed="0" />
+          <DynamicChecks Passed="0" Failed="0" />
+          <Passed>true</Passed>
+          <Check Type="Pre" Text="isDisplayCorrect" Passed="true" />
+          <Check Type="Post" Text="newMode == getMode()" Passed="true" />
+          <Invariant ID="displayCheck">
+            <Passed>true</Passed>
+            <ExecutionCount>2</ExecutionCount>
+            <DynamicChecks Passed="0" Failed="0" />
+            <Checks Passed="2" Failed="0" />
+            <Beliefs Passed="0" Failed="0" />
+            <Execution ID="1">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="1" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+              <Check Type="Check" Text="time == dateTime" Passed="true" />
+            </Execution>
+            <Execution ID="2">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="1" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+              <Check Type="Check" Text="time == timer" Passed="true" />
+            </Execution>
+          </Invariant>
+        </Execution>
+      </Responsibility>
+      <Responsibility ID="Scalar Void startStopButton()">
+        <Passed>true</Passed>
+        <BindPoint>startStopButton</BindPoint>
+        <ExecutionCount>2</ExecutionCount>
+        <Pre Passed="4" Failed="0" />
+        <Checks Passed="2" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+        <Post Passed="7" Failed="0" />
+        <DynamicChecks Passed="0" Failed="0" />
+        <Execution ID="1">
+          <Pre Passed="2" Failed="0" />
+          <Checks Passed="0" Failed="0" />
+          <Beliefs Passed="0" Failed="0" />
+          <Post Passed="3" Failed="0" />
+          <DynamicChecks Passed="0" Failed="0" />
+          <Passed>true</Passed>
+          <Check Type="Pre" Text="timerDisplayed" Passed="true" />
+          <Check Type="Pre" Text="Timer == getMode()" Passed="true" />
+          <Check Type="Post" Text="newTimerState == getTimerState()" Passed="true" />
+          <Check Type="Post" Text="timerDisplayed" Passed="true" />
+          <Check Type="Post" Text="Timer == getMode()" Passed="true" />
+          <Invariant ID="displayCheck">
+            <Passed>true</Passed>
+            <ExecutionCount>2</ExecutionCount>
+            <DynamicChecks Passed="0" Failed="0" />
+            <Checks Passed="1" Failed="0" />
+            <Beliefs Passed="0" Failed="0" />
+            <Execution ID="1">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="1" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+              <Check Type="Check" Text="time == timer" Passed="true" />
+            </Execution>
+            <Execution ID="2">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="0" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+            </Execution>
+          </Invariant>
+        </Execution>
+        <Execution ID="2">
+          <Pre Passed="2" Failed="0" />
+          <Checks Passed="0" Failed="0" />
+          <Beliefs Passed="0" Failed="0" />
+          <Post Passed="4" Failed="0" />
+          <DynamicChecks Passed="0" Failed="0" />
+          <Passed>true</Passed>
+          <Check Type="Pre" Text="timerDisplayed" Passed="true" />
+          <Check Type="Pre" Text="Timer == getMode()" Passed="true" />
+          <Check Type="Post" Text="newTimerState == getTimerState()" Passed="true" />
+          <Check Type="Post" Text="timerFrozen == isTimerFrozen()" Passed="true" />
+          <Check Type="Post" Text="timerDisplayed" Passed="true" />
+          <Check Type="Post" Text="Timer == getMode()" Passed="true" />
+          <Invariant ID="displayCheck">
+            <Passed>true</Passed>
+            <ExecutionCount>2</ExecutionCount>
+            <DynamicChecks Passed="0" Failed="0" />
+            <Checks Passed="1" Failed="0" />
+            <Beliefs Passed="0" Failed="0" />
+            <Execution ID="1">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="0" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+            </Execution>
+            <Execution ID="2">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="1" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+              <Check Type="Check" Text="time == timer" Passed="true" />
+            </Execution>
+          </Invariant>
+        </Execution>
+      </Responsibility>
+      <Responsibility ID="Scalar Void resetLapButton()">
+        <Passed>true</Passed>
+        <BindPoint>resetLapButton</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <Pre Passed="3" Failed="0" />
+        <Checks Passed="2" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+        <Post Passed="3" Failed="0" />
+        <DynamicChecks Passed="0" Failed="0" />
+        <Execution ID="1">
+          <Pre Passed="3" Failed="0" />
+          <Checks Passed="0" Failed="0" />
+          <Beliefs Passed="0" Failed="0" />
+          <Post Passed="3" Failed="0" />
+          <DynamicChecks Passed="0" Failed="0" />
+          <Passed>true</Passed>
+          <Check Type="Pre" Text="timerDisplayed" Passed="true" />
+          <Check Type="Pre" Text="Timer == getMode()" Passed="true" />
+          <Check Type="Pre" Text="timerState == Stopped || timerState == Running" Passed="true" />
+          <Check Type="Post" Text="newTimerState == getTimerState()" Passed="true" />
+          <Check Type="Post" Text="timerDisplayed" Passed="true" />
+          <Check Type="Post" Text="Timer == getMode()" Passed="true" />
+          <Invariant ID="displayCheck">
+            <Passed>true</Passed>
+            <ExecutionCount>2</ExecutionCount>
+            <DynamicChecks Passed="0" Failed="0" />
+            <Checks Passed="2" Failed="0" />
+            <Beliefs Passed="0" Failed="0" />
+            <Execution ID="1">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="1" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+              <Check Type="Check" Text="time == timer" Passed="true" />
+            </Execution>
+            <Execution ID="2">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="1" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+              <Check Type="Check" Text="time == timer" Passed="true" />
+            </Execution>
+          </Invariant>
+        </Execution>
+      </Responsibility>
+      <Reports />
+    </Instance>
+    <Reports />
+  </Contract>
+  <TotalStaticChecksPassed>0</TotalStaticChecksPassed>
+  <TotalStaticChecksFailed>0</TotalStaticChecksFailed>
+  <TotalDynamicChecksPassed>0</TotalDynamicChecksPassed>
+  <TotalDynamicChecksFailed>0</TotalDynamicChecksFailed>
+  <TotalMetricChecksPassed>0</TotalMetricChecksPassed>
+  <TotalMetricChecksFailed>0</TotalMetricChecksFailed>
+  <TotalContractsPassed>1</TotalContractsPassed>
+  <TotalInteractionsPassed>0</TotalInteractionsPassed>
+  <TotalContractsFailed>0</TotalContractsFailed>
+  <TotalInteractionsFailed>0</TotalInteractionsFailed>
+  <TotalScenariosPassed>0</TotalScenariosPassed>
+  <TotalScenariosFailed>0</TotalScenariosFailed>
+  <TotalPrePassed>8</TotalPrePassed>
+  <TotalPreFailed>0</TotalPreFailed>
+  <TotalBeliefsPassed>0</TotalBeliefsPassed>
+  <TotalBeliefsFailed>0</TotalBeliefsFailed>
+  <TotalChecksPassed>7</TotalChecksPassed>
+  <TotalChecksFailed>0</TotalChecksFailed>
+  <TotalPostPassed>11</TotalPostPassed>
+  <TotalPostFailed>0</TotalPostFailed>
+  <TotalRelPassed>0</TotalRelPassed>
+  <TotalRelFailed>0</TotalRelFailed>
+  <Date>Friday, April 06, 2012 at 13:49:38</Date>
+</Report>

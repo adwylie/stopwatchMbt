@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Build</Configuration>
+    <Name>ACL Project</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e93c67a5-772e-40d0-9c22-d10b27d7af2a}</ProjectGuid>
+    <RootNamespace>DaveArnold.Contracts</RootNamespace>
+    <CilName>CIL</CilName>
+    <OutputPath>Build</OutputPath>
+    <ResponsibilityRefinementError>true</ResponsibilityRefinementError>
+    <CommandLineArguments>
+    </CommandLineArguments>
+    <OutputType>CIL</OutputType>
+    <ScenarioRefinementWarning>false</ScenarioRefinementWarning>
+    <MetricRefinementWarning>false</MetricRefinementWarning>
+    <AutoBind>true</AutoBind>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Build' ">
+    <OutputPath>cil\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Implementation.Bindings">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Stopwatch.acl">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Report.VFCER">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="stopwatchImp.exe">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="stopwatchImp.pdb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Dave Arnold\ACL\DaveArnold.ACL.targets" />
+</Project>

@@ -1,0 +1,109 @@
+﻿
+<!-- ACL Binding File (v1.3.0.2) -->
+<!-- Generated using the ACL 3.2 Compiler version 1.3.0.2 - (c) Dave Arnold 2006-2012 -->
+<!-- WARNING: Modification of this file could result in incorrect binding data, or a re-generation of the entire binding table -->
+<Bindings>
+  <Header>
+    <Version>1.3.0.0</Version>
+    <AutoBind>true</AutoBind>
+    <AutoBinder>Default AutoBind Module</AutoBinder>
+    <IUT>C:\Users\Andrew\Desktop\COMP4905\stopwatchVF\stopwatchVF\stopwatchImp.exe</IUT>
+    <IUTHash>7aaf903e33de935230c02e5db9a5e2c4</IUTHash>
+  </Header>
+  <BindingData>
+    <Namespaces>
+      <Namespace ID="DaveArnold">
+        <Namespace ID="Contracts">
+          <Bind Kind="Contract">
+            <Name>Stopwatch</Name>
+            <Target rOnly="false" MetaTag="33554436">stopwatchImp.StopwatchCS</Target>
+            <Observabilities>
+              <Bind Kind="Observability">
+                <Name>getMode</Name>
+                <ReturnType ACLType="String" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663312">System.String getMode()<ReturnType Type="System.String" List="No" ACLType="String" /></Target>
+              </Bind>
+              <Bind Kind="Observability">
+                <Name>getTimerState</Name>
+                <ReturnType ACLType="String" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663313">System.String getTimerState()<ReturnType Type="System.String" List="No" ACLType="String" /></Target>
+              </Bind>
+              <Bind Kind="Observability">
+                <Name>isTimerFrozen</Name>
+                <ReturnType ACLType="Boolean" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663314">Boolean isTimerFrozen()<ReturnType Type="System.Boolean" List="No" ACLType="Boolean" /></Target>
+              </Bind>
+              <Bind Kind="Observability">
+                <Name>getUITimeText</Name>
+                <ReturnType ACLType="String" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663319">System.String getCurrentDisplay()<ReturnType Type="System.String" List="No" ACLType="String" /></Target>
+              </Bind>
+              <Bind Kind="Observability">
+                <Name>getDateTimeText</Name>
+                <ReturnType ACLType="String" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663318">System.String getCurrentDateTime()<ReturnType Type="System.String" List="No" ACLType="String" /></Target>
+              </Bind>
+              <Bind Kind="Observability">
+                <Name>getTimerText</Name>
+                <ReturnType ACLType="String" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663317">System.String getCurrentTimer()<ReturnType Type="System.String" List="No" ACLType="String" /></Target>
+              </Bind>
+            </Observabilities>
+            <Responsibilities>
+              <Bind Kind="Responsibility">
+                <Name>new</Name>
+                <ReturnType ACLType="Void" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663308">Void .ctor()<ReturnType Type="System.Void" List="No" ACLType="Void" /></Target>
+              </Bind>
+              <Bind Kind="Responsibility">
+                <Name>modeButton</Name>
+                <ReturnType ACLType="Void" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663309">Void modeButton()<ReturnType Type="System.Void" List="No" ACLType="Void" /></Target>
+              </Bind>
+              <Bind Kind="Responsibility">
+                <Name>startStopButton</Name>
+                <ReturnType ACLType="Void" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663310">Void startStopButton()<ReturnType Type="System.Void" List="No" ACLType="Void" /></Target>
+              </Bind>
+              <Bind Kind="Responsibility">
+                <Name>resetLapButton</Name>
+                <ReturnType ACLType="Void" List="No" />
+                <PreReq Count="1">
+                  <Required Kind="Contract">DaveArnold.Contracts.Stopwatch</Required>
+                </PreReq>
+                <Target rOnly="false" MetaTag="100663311">Void resetLapButton()<ReturnType Type="System.Void" List="No" ACLType="Void" /></Target>
+              </Bind>
+            </Responsibilities>
+          </Bind>
+        </Namespace>
+      </Namespace>
+    </Namespaces>
+  </BindingData>
+</Bindings>

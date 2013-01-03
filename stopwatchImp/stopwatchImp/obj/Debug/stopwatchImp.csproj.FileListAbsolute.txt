@@ -1,0 +1,10 @@
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.exe.config
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.exe
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.pdb
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\Debug\stopwatchImp.Properties.Resources.resources
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\Debug\stopwatchImp.stopwatchUI.resources
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\Debug\ResGen.read.1.tlog
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\Debug\ResGen.write.1.tlog
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\Debug\stopwatchImp.exe
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\Debug\stopwatchImp.pdb

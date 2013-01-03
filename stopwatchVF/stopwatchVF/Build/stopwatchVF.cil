@@ -1,0 +1,518 @@
+-- --------------------------------------------------------------------------
+-- CIL Generated on Tuesday, April 17, 2012 at 19:32:02
+-- Generation performed by the CIL Code Generator (Version 1.3.0.2)
+-- (c) Dave Arnold 2006-2012
+-- --------------------------------------------------------------------------
+cil 1 3 0 2
+dta 54
+sdv 0 "C:\Users\Andrew\Desktop\COMP4905\stopwatchVF\stopwatchVF\stopwatchImp.exe"
+sdv 1 "7aaf903e33de935230c02e5db9a5e2c4"
+sdv 2 ""
+sdv 3 "DaveArnold.Contracts"
+sdv 4 "Stopwatch"
+sdv 5 "timerDisplayed"
+sdv 6 "timerFrozen"
+sdv 7 "timerState"
+sdv 8 "timer"
+sdv 9 "Scalar String getMode()"
+sdv 10 "Scalar String getTimerState()"
+sdv 11 "Scalar Boolean isTimerFrozen()"
+sdv 12 "Scalar String getUITimeText()"
+sdv 13 "Scalar String getDateTimeText()"
+sdv 14 "Scalar String getTimerText()"
+sdv 15 "displayCheck"
+sdv 16 "time"
+sdv 17 "dateTime"
+sdv 18 "currentMode"
+sdv 19 "DateTime"
+bdv 20 1
+sdv 21 "TV_0224d5af77004457b3dc14716ec4881f"
+sdv 22 "Running"
+bdv 23 0
+sdv 24 "TV_0a1ff0c0e5f246b9931a60982297fe32"
+sdv 25 "time == dateTime"
+sdv 26 "Timer"
+sdv 27 "TV_65ac27ce42bb41419d85cbf79268be92"
+sdv 28 "TV_212b2b71645841149c6b5c122c19320b"
+sdv 29 "time == timer"
+sdv 30 "Scalar Void new()"
+sdv 31 "Reset"
+sdv 32 "Scalar Void modeButton()"
+sdv 33 "newMode"
+sdv 34 "isDisplayCorrect"
+sdv 35 "TV_3f50d8a1f412429eb0a26ab625350db6"
+sdv 36 "TV_53b336727abe4c739d68a5c0bee016e4"
+sdv 37 "newMode == getMode()"
+sdv 38 "Scalar Void startStopButton()"
+sdv 39 "newTimerState"
+sdv 40 "checkTimerFrozen"
+sdv 41 "Timer == getMode()"
+sdv 42 "TV_c05f19ef80c04a688183811d253b7a24"
+sdv 43 "Stopped"
+sdv 44 "TV_d22e179e38d6424bbdc0792260aa4936"
+sdv 45 "newTimerState == getTimerState()"
+sdv 46 "TV_c1425ed6a4c74595a7b3ec87aa40cfa5"
+sdv 47 "timerFrozen == isTimerFrozen()"
+sdv 48 "Scalar Void resetLapButton()"
+sdv 49 "toggleTimerFrozen"
+sdv 50 "timerState == Stopped || timerState == Running"
+sdv 51 "TV_037182d9b6954b57a52c9ec4f231db9e"
+sdv 52 "TV_d90bd36f6d694078876ffdc322fe1c7f"
+sdv 53 "TV_799b4625fe7b4f0aa2b3de1d9dfbf1b8"
+ldt 0
+ldt 1
+iut
+ldt 3
+ldt 4
+bct 33554436
+ldt 5
+vdl 0 1
+ldt 6
+vdl 1 1
+ldt 7
+vdl 2 7
+ldt 8
+vdl 3 8
+bst
+est
+bos 0 9
+inv 100663312
+ret
+eos
+bos 1 10
+inv 100663313
+ret
+eos
+bos 2 11
+inv 100663314
+ret
+eos
+bos 3 12
+inv 100663319
+ret
+eos
+bos 4 13
+inv 100663318
+ret
+eos
+bos 5 14
+inv 100663317
+ret
+eos
+biv 0 15
+ldt 16
+cal 0 3 0
+vdl 4 23
+ldt 8
+cal 0 5 0
+vdl 5 23
+ldt 17
+cal 0 4 0
+vdl 6 23
+ldt 18
+cal 0 0 0
+vdl 7 23
+ldt 21
+vdl 18 65
+ldt 27
+vdl 20 65
+lvr 7
+ldt 19
+eqs 0
+lvr 18
+afs
+lvr 18
+ldt 20
+cmp 0
+jne ce_0
+ldt 24
+vdl 19 65
+cal 0 1 0
+ldt 22
+eqs 0
+lvr 19
+afs
+lvr 19
+ldt 23
+cmp 0
+jne ce_1
+lvr 6
+lvr 4
+eqs 0
+ldt 25
+chk
+jmp ce_1
+:ce_1
+evs 19
+jmp ce_0
+:ce_0
+lvr 7
+ldt 26
+eqs 0
+lvr 20
+afs
+lvr 20
+ldt 20
+cmp 0
+jne ce_2
+ldt 28
+vdl 21 65
+cal 0 1 0
+ldt 22
+eqs 0
+lvr 21
+afs
+lvr 21
+ldt 23
+cmp 0
+jne ce_3
+lvr 5
+lvr 4
+eqs 0
+ldt 29
+chk
+jmp ce_3
+:ce_3
+evs 21
+jmp ce_2
+:ce_2
+evs 4
+evs 5
+evs 6
+evs 7
+evs 18
+evs 20
+ret
+eiv
+bre 0 30 1 0 0
+rme 100663308
+exe
+slk
+ldt 23
+lvr 0
+afs
+suk
+slk
+ldt 23
+lvr 1
+afs
+suk
+slk
+ldt 31
+lvr 2
+afs
+suk
+cal 1 0 0
+ret
+ere
+bre 1 32 1 0 0
+rme 100663309
+cal 1 0 0
+ldt 33
+vdl 8 7
+ldt 18
+cal 0 0 0
+vdl 9 23
+ldt 34
+vdl 10 1
+ldt 35
+vdl 22 65
+ldt 36
+vdl 23 65
+lvr 9
+ldt 26
+eqs 0
+lvr 22
+afs
+lvr 22
+ldt 20
+cmp 0
+jne ce_4
+slk
+lvr 0
+lvr 10
+afs
+suk
+slk
+ldt 19
+lvr 8
+afs
+suk
+jmp ce_4
+:ce_4
+lvr 9
+ldt 19
+eqs 0
+lvr 23
+afs
+lvr 23
+ldt 20
+cmp 0
+jne ce_5
+slk
+lvr 0
+not
+lvr 10
+afs
+suk
+slk
+ldt 26
+lvr 8
+afs
+suk
+jmp ce_5
+:ce_5
+lvr 10
+ldt 34
+pre
+exe
+cal 0 0 0
+lvr 8
+eqs 0
+ldt 37
+pst
+slk
+lvr 0
+not
+lvr 0
+afs
+suk
+evs 8
+evs 9
+evs 10
+evs 22
+evs 23
+cal 1 0 0
+ret
+ere
+bre 2 38 1 0 0
+rme 100663310
+cal 1 0 0
+ldt 39
+vdl 12 7
+ldt 40
+ldt 23
+vdl 13 17
+ldt 42
+vdl 24 65
+ldt 44
+vdl 25 65
+ldt 46
+vdl 26 65
+lvr 0
+ldt 5
+pre
+cal 0 0 0
+ldt 26
+eqs 0
+ldt 41
+pre
+ldt 22
+lvr 2
+eqs 0
+lvr 24
+afs
+lvr 24
+ldt 20
+cmp 0
+jne ce_6
+slk
+ldt 43
+lvr 12
+afs
+suk
+slk
+ldt 20
+lvr 13
+afs
+suk
+jmp ce_6
+:ce_6
+ldt 31
+lvr 2
+eqs 0
+ldt 43
+lvr 2
+eqs 0
+orx
+lvr 25
+afs
+lvr 25
+ldt 20
+cmp 0
+jne ce_7
+slk
+ldt 22
+lvr 12
+afs
+suk
+jmp ce_7
+:ce_7
+exe
+cal 0 1 0
+lvr 12
+eqs 0
+ldt 45
+pst
+slk
+cal 0 1 0
+lvr 2
+afs
+suk
+lvr 13
+lvr 26
+afs
+lvr 26
+ldt 20
+cmp 0
+jne ce_8
+slk
+ldt 23
+lvr 1
+afs
+suk
+cal 0 2 0
+lvr 1
+eqs 0
+ldt 47
+pst
+jmp ce_8
+:ce_8
+lvr 0
+ldt 5
+pst
+cal 0 0 0
+ldt 26
+eqs 0
+ldt 41
+pst
+evs 12
+evs 13
+evs 24
+evs 25
+evs 26
+cal 1 0 0
+ret
+ere
+bre 3 48 1 0 0
+rme 100663311
+cal 1 0 0
+ldt 39
+vdl 15 7
+ldt 49
+ldt 23
+vdl 16 17
+ldt 51
+vdl 27 65
+ldt 52
+vdl 28 65
+ldt 53
+vdl 29 65
+lvr 0
+ldt 5
+pre
+cal 0 0 0
+ldt 26
+eqs 0
+ldt 41
+pre
+ldt 22
+lvr 2
+eqs 0
+ldt 43
+lvr 2
+eqs 0
+orx
+ldt 50
+pre
+ldt 43
+lvr 2
+eqs 0
+lvr 27
+afs
+lvr 27
+ldt 20
+cmp 0
+jne ce_9
+slk
+ldt 31
+lvr 15
+afs
+suk
+jmp ce_9
+:ce_9
+ldt 22
+lvr 2
+eqs 0
+lvr 28
+afs
+lvr 28
+ldt 20
+cmp 0
+jne ce_10
+slk
+ldt 22
+lvr 15
+afs
+suk
+slk
+ldt 20
+lvr 16
+afs
+suk
+jmp ce_10
+:ce_10
+exe
+cal 0 1 0
+lvr 15
+eqs 0
+ldt 45
+pst
+slk
+cal 0 1 0
+lvr 2
+afs
+suk
+lvr 16
+lvr 29
+afs
+lvr 29
+ldt 20
+cmp 0
+jne ce_11
+slk
+lvr 1
+not
+lvr 1
+afs
+suk
+cal 0 2 0
+lvr 1
+eqs 0
+ldt 47
+pst
+jmp ce_11
+:ce_11
+lvr 0
+ldt 5
+pst
+cal 0 0 0
+ldt 26
+eqs 0
+ldt 41
+pst
+evs 15
+evs 16
+evs 27
+evs 28
+evs 29
+cal 1 0 0
+ret
+ere
+brp
+erp
+ect
+ldt 2
+run 1
+eof
+-- --------------------------------------------------------------------------

@@ -1,0 +1,30 @@
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.exe.config
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.exe
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.pdb
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.Properties.Resources.resources
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.stopwatchUI.resources
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.exe
+C:\Users\Andy\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.pdb
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.exe.config
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.exe
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.pdb
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.Properties.Resources.resources
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.stopwatchUI.resources
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.exe
+C:\Users\Andrew\Dropbox\Current Semester\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.pdb
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.exe.config
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.exe
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\bin\Debug\stopwatchImp.pdb
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.Properties.Resources.resources
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.stopwatchUI.resources
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.exe
+C:\Users\Andrew\Desktop\COMP4905\stopwatchImp\stopwatchImp\obj\x86\Debug\stopwatchImp.pdb

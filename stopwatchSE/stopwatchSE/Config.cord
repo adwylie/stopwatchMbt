@@ -1,0 +1,90 @@
+﻿// This is a Spec Explorer coordination script (Cord version 1.0).
+// Here is where you define configurations and machines describing the
+// exploration to be performed.
+
+using stopwatchImp;
+
+config Main 
+{
+    // Implementation actions that will be modeled and tested.
+    action StopwatchCS();
+
+    action void StopwatchCS.modeButton();
+    action void StopwatchCS.startStopButton();
+    action void StopwatchCS.resetLapButton();
+
+    action string StopwatchCS.getMode();
+    action string StopwatchCS.getTimerState();
+    action bool StopwatchCS.isTimerFrozen();
+
+    // Configuration options.
+    switch StateBound = 512;
+    switch StepBound = 512;
+    switch PathDepthBound = 512;
+    switch TestClassBase = "vs";
+    switch GeneratedTestFile = "StopwatchTests.cs";
+    switch GeneratedTestPath = "..\\stopwatchTests";
+    switch GeneratedTestNamespace = "stopwatchSE.TestSuite";
+    switch TestEnabled = false;
+    switch ForExploration = false;
+}
+
+machine Default() : Main
+{
+    construct model program from Main
+    where scope = "stopwatchSE"
+}
+
+machine StateActions() : Main
+{
+    (new StopwatchCS; (_.modeButton; | _.startStopButton; | _.resetLapButton)*)
+}
+
+machine AllActions() : Main
+{
+    (new StopwatchCS; (_.modeButton; | _.startStopButton; | _.resetLapButton; | _.getMode; | _.getTimerState; | _.isTimerFrozen)*)
+}
+
+
+machine ValidStateActions() : Main where ForExploration = true
+{
+    StateActions || Default
+}
+
+machine ValidAllActions() : Main where ForExploration = true
+{
+    AllActions || Default
+}
+
+machine Test8() : Main where ForExploration = true
+{
+    (
+    new StopwatchCS;
+    _.getMode; _.getTimerState; _.isTimerFrozen;
+    _.modeButton;
+    _.getMode; _.getTimerState; _.isTimerFrozen;
+    _.startStopButton;
+    _.getMode; _.getTimerState; _.isTimerFrozen;
+    _.modeButton;
+    _.getMode; _.getTimerState; _.isTimerFrozen;
+    _.modeButton;
+    _.getMode; _.getTimerState; _.isTimerFrozen;
+    )
+    || Default
+}
+
+
+machine StopwatchShortTests() : Main where ForExploration = true, TestEnabled = true
+{
+    construct test cases where Strategy = "ShortTests" for ValidAllActions();
+}
+
+machine StopwatchLongTests() : Main where ForExploration = true, TestEnabled = true
+{
+    construct test cases where Strategy = "LongTests" for ValidAllActions();
+}
+
+machine StopwatchTest8() : Main where ForExploration = true, TestEnabled = true
+{
+    construct test cases for Test8();
+}

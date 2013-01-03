@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report>
+  <Version>1.3.0.2</Version>
+  <Project>ACL Project</Project>
+  <Runtime>Runtime 1.3 - Version 1.3.0.2 (Feb 2012)</Runtime>
+  <IUTName>stopwatchImp.exe</IUTName>
+  <Contract ID="Stopwatch" Name="DaveArnold.Contracts.Stopwatch">
+    <BoundTo>stopwatchImp.StopwatchCS</BoundTo>
+    <Passed>true</Passed>
+    <StaticChecks Passed="0" Failed="0" />
+    <DynamicChecks Passed="0" Failed="0" />
+    <MetricChecks Passed="0" Failed="0" />
+    <Pre Passed="0" Failed="0" />
+    <Checks Passed="1" Failed="0" />
+    <Beliefs Passed="0" Failed="0" />
+    <Post Passed="0" Failed="0" />
+    <Scenarios Passed="0" Failed="0" />
+    <Structure>
+      <Passed>true</Passed>
+      <Beliefs Passed="0" Failed="0" />
+    </Structure>
+    <InstanceCount>1</InstanceCount>
+    <Instance ID="39475272">
+      <Passed>true</Passed>
+      <DynamicChecks Passed="0" Failed="0" />
+      <MetricChecks Passed="0" Failed="0" />
+      <Scenarios Passed="0" Failed="0" />
+      <Pre Passed="0" Failed="0" />
+      <Checks Passed="1" Failed="0" />
+      <Beliefs Passed="0" Failed="0" />
+      <Post Passed="0" Failed="0" />
+      <Scenarios Passed="0" Failed="0" />
+      <Observability ID="Scalar String getUITimeText()">
+        <Passed>true</Passed>
+        <BindPoint>getCurrentDisplay</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Observability ID="Scalar String getTimerText()">
+        <Passed>true</Passed>
+        <BindPoint>getCurrentTimer</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Observability ID="Scalar String getDateTimeText()">
+        <Passed>true</Passed>
+        <BindPoint>getCurrentDateTime</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Observability ID="Scalar String getMode()">
+        <Passed>true</Passed>
+        <BindPoint>getMode</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Observability ID="Scalar String getTimerState()">
+        <Passed>true</Passed>
+        <BindPoint>getTimerState</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <DynamicChecks Passed="0" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+      </Observability>
+      <Responsibility ID="Scalar Void new()">
+        <Passed>true</Passed>
+        <BindPoint>.ctor</BindPoint>
+        <ExecutionCount>1</ExecutionCount>
+        <Pre Passed="0" Failed="0" />
+        <Checks Passed="1" Failed="0" />
+        <Beliefs Passed="0" Failed="0" />
+        <Post Passed="0" Failed="0" />
+        <DynamicChecks Passed="0" Failed="0" />
+        <Execution ID="1">
+          <Pre Passed="0" Failed="0" />
+          <Checks Passed="0" Failed="0" />
+          <Beliefs Passed="0" Failed="0" />
+          <Post Passed="0" Failed="0" />
+          <DynamicChecks Passed="0" Failed="0" />
+          <Passed>true</Passed>
+          <Invariant ID="displayCheck">
+            <Passed>true</Passed>
+            <ExecutionCount>1</ExecutionCount>
+            <DynamicChecks Passed="0" Failed="0" />
+            <Checks Passed="1" Failed="0" />
+            <Beliefs Passed="0" Failed="0" />
+            <Execution ID="1">
+              <DynamicChecks Passed="0" Failed="0" />
+              <Checks Passed="1" Failed="0" />
+              <Beliefs Passed="0" Failed="0" />
+              <Check Type="Check" Text="time == dateTime" Passed="true" />
+            </Execution>
+          </Invariant>
+        </Execution>
+      </Responsibility>
+      <Reports />
+    </Instance>
+    <Reports />
+  </Contract>
+  <TotalStaticChecksPassed>0</TotalStaticChecksPassed>
+  <TotalStaticChecksFailed>0</TotalStaticChecksFailed>
+  <TotalDynamicChecksPassed>0</TotalDynamicChecksPassed>
+  <TotalDynamicChecksFailed>0</TotalDynamicChecksFailed>
+  <TotalMetricChecksPassed>0</TotalMetricChecksPassed>
+  <TotalMetricChecksFailed>0</TotalMetricChecksFailed>
+  <TotalContractsPassed>1</TotalContractsPassed>
+  <TotalInteractionsPassed>0</TotalInteractionsPassed>
+  <TotalContractsFailed>0</TotalContractsFailed>
+  <TotalInteractionsFailed>0</TotalInteractionsFailed>
+  <TotalScenariosPassed>0</TotalScenariosPassed>
+  <TotalScenariosFailed>0</TotalScenariosFailed>
+  <TotalPrePassed>0</TotalPrePassed>
+  <TotalPreFailed>0</TotalPreFailed>
+  <TotalBeliefsPassed>0</TotalBeliefsPassed>
+  <TotalBeliefsFailed>0</TotalBeliefsFailed>
+  <TotalChecksPassed>1</TotalChecksPassed>
+  <TotalChecksFailed>0</TotalChecksFailed>
+  <TotalPostPassed>0</TotalPostPassed>
+  <TotalPostFailed>0</TotalPostFailed>
+  <TotalRelPassed>0</TotalRelPassed>
+  <TotalRelFailed>0</TotalRelFailed>
+  <Date>Tuesday, April 17, 2012 at 19:32:05</Date>
+</Report>
