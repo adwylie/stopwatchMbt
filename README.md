@@ -1,6 +1,6 @@
 # A Case Study of Model-Based Testing Using Microsoft Spec Explorer and Validation Framework
 
-As mentioned in the title, this project is a case study of model-based testing using [Dave Arnold](http://davearnold.ca/)'s [Validation Framework](http://vf.davearnold.ca/) and Microsoft's [Spec Explorer](). It was the honours project for my B.C.S at [Carleton University](http://www.carleton.ca/).
+As mentioned in the title, this project is a case study of model-based testing using [Dave Arnold](http://davearnold.ca/)'s [Validation Framework](http://vf.davearnold.ca/) and Microsoft's [Spec Explorer](http://visualstudiogallery.msdn.microsoft.com/271d0904-f178-4ce9-956b-d9bfa4902745). It was the honours project for my B.C.S at [Carleton University](http://www.carleton.ca/).
 
 ## Overview
 
